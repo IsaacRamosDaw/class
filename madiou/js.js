@@ -6,13 +6,19 @@
 
 // 1
 //! Créez une alerte qui s'affiche en appuyant sur le bouton avec un message : "hello world".
+
 //* id ou classe
 //* alert
 //* getElementBy... 
 //* événements (addEventListener)
 //* savoir que vous pouvez exécuter des fonctions sans avoir besoin d'un return
 //* (Ce n'est pas nécessaire, mais le concept de fonction fléchée "arrow function" peut rendre votre code plus court.)
+const h = "hello world";
+const button = document.getElementById("myButton");
 
+button.addEventListener("click", () => {  
+    alert(h);
+});
 
 
 // 2
@@ -30,6 +36,16 @@
 //? const madiou = {
 //? hauteur: "2 mètres"
 //? }
+const Data ={
+    Nom: "Johny Deep",
+    Age: 50,
+    Travail: "Acteur"
+};
+document.getElementById("myData").addEventListener("click", () => {
+    alert(`Nom : ${Data.Nom}, Age : ${Data.Age}, Travail : ${Data.Travail}`);
+    
+});
+
 
  
 //  3
@@ -41,9 +57,27 @@
 //* Si vous ne vous souvenez pas du concept de submit dans un élément HTML, je vous recommande de le revoir.
 //* addEventListener a plus d'options que "click".
 //* Utilisez le concept d'objet si vous vous en sentez capable. 
+const form = document.getElementById("myFormData");
+form.addEventListener("submit", () => {
+    const name = document.getElementById("myName").value;
+    const age = document.getElementById("myAge").value;
+    const job = document.getElementById("myJob").value;
+    alert(`Nom : ${name}, Age : ${age}, Travail : ${job}`);
+});
 
 
 // 4
 
 //! Avant, vous créiez des variables pour les insérer directement dans l'alerte. Maintenant, vous allez faire quelque chose de similaire.
 //! Je veux que vous créiez un tableau qui contienne les valeurs des champs de saisie et qu'elles soient affichées dans le bon ordre.
+const from2 = document.getElementById("myArrayData");
+
+from2.addEventListener("submit", () => { 
+    const array = [ 
+         document.getElementById("fourthName").value,
+         document.getElementById("thirdName").value, 
+         document.getElementById("firstName").value,
+         document.getElementById("secondName").value
+        ];
+    alert(`${array[2]}  ${array[3]}  ${array[1]}  ${array[0]}`);
+});
