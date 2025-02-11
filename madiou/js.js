@@ -16,7 +16,7 @@
 const h = "hello world";
 const button = document.getElementById("myButton");
 
-button.addEventListener("click", () => {  
+button.addEventListener("click", () => {
     alert(h);
 });
 
@@ -36,18 +36,18 @@ button.addEventListener("click", () => {
 //? const madiou = {
 //? hauteur: "2 mètres"
 //? }
-const Data ={
+const Data = {
     Nom: "Johny Deep",
     Age: 50,
     Travail: "Acteur"
 };
 document.getElementById("myData").addEventListener("click", () => {
     alert(`Nom : ${Data.Nom}, Age : ${Data.Age}, Travail : ${Data.Travail}`);
-    
+
 });
 
 
- 
+
 //  3
 //! Normalement, les informations que nous allons traiter seront envoyées via des formulaires et des fetchs (requêtes).  
 //! Quand nous serons sur React, nous parlerons davantage des fetchs.  
@@ -72,12 +72,35 @@ form.addEventListener("submit", () => {
 //! Je veux que vous créiez un tableau qui contienne les valeurs des champs de saisie et qu'elles soient affichées dans le bon ordre.
 const from2 = document.getElementById("myArrayData");
 
-from2.addEventListener("submit", () => { 
-    const array = [ 
-         document.getElementById("fourthName").value,
-         document.getElementById("thirdName").value, 
-         document.getElementById("firstName").value,
-         document.getElementById("secondName").value
-        ];
+from2.addEventListener("submit", () => {
+    const array = [
+        document.getElementById("fourthName").value,
+        document.getElementById("thirdName").value,
+        document.getElementById("firstName").value,
+        document.getElementById("secondName").value
+    ];
     alert(`${array[2]}  ${array[3]}  ${array[1]}  ${array[0]}`);
 });
+
+
+// 5
+//? Je suppose que tu comprends déjà le concept de fonctions. Ce sont des morceaux de code qui s'exécutent lorsque tu les appelles.
+//? Ici, tu n'as pas besoin de récupérer les informations depuis le HTML, tu vas les écrire directement ici dans le code.  
+//* Tu as besoin de savoir comment créer une fonction (ainsi que le concept de paramètre dans les fonctions).
+//* Comprendre comment fonctionnent les structures conditionnelles if else, bien que tu puisses le faire uniquement avec un if.
+
+
+
+// 6
+//? Maintenant, tu dois essayer de récupérer la donnée depuis cet input.
+//* Tu as besoin de savoir comment créer une fonction (ainsi que le concept de paramètre dans les fonctions).
+
+
+//! Félicitations pour être arrivé(e) jusqu'ici !
+//? Il serait très utile que tu regardes plus d'informations sur les fonctions et que tu comprennes ce qu'est un return dans une fonction. Exemple :
+
+//* function somme(a, b){
+//*     return a + b;
+//* }
+
+//? Cette fonction n'affichera rien à l'écran, et l'utilisateur ne verra rien. Mais cette fonction, lorsqu'elle est appelée, renverra un résultat qui pourra être capturé et utilisé ailleurs.
